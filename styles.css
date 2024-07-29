@@ -1,24 +1,36 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 .container {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     text-align: center;
+    max-width: 400px;
+    width: 100%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 h1 {
-    color: #333;
-    margin-bottom: 1rem;
+    font-family: 'Lobster', cursive;
+    color: #ff6f61;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .password-display {
@@ -28,19 +40,48 @@ h1 {
 
 #passwordOutput {
     flex-grow: 1;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    border: 2px solid #ff6f61;
     border-radius: 4px 0 0 4px;
+    transition: border-color 0.3s ease;
+}
+
+#passwordOutput:focus {
+    outline: none;
+    border-color: #ff3b30;
 }
 
 #copyButton {
-    padding: 0.5rem 1rem;
-    background-color: #4CAF50;
+    padding: 0.75rem 1rem;
+    background-color: #ff6f61;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
+    transition: background-color 0.3s ease;
+}
+
+#copyButton:hover {
+    background-color: #ff3b30;
+}
+
+.strength-meter {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.strength-bar {
+    height: 5px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+}
+
+#strengthText {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
 }
 
 .options {
@@ -52,27 +93,37 @@ h1 {
 
 .options label {
     margin-bottom: 0.5rem;
+    color: #ff6f61;
 }
 
 .options input,
 .options select {
     width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid #ff6f61;
     border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.options input:focus,
+.options select:focus {
+    outline: none;
+    border-color: #ff3b30;
 }
 
 #generateButton {
-    padding: 0.5rem 1rem;
-    background-color: #008CBA;
+    padding: 0.75rem 1rem;
+    background-color: #ff6f61;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 #generateButton:hover {
-    background-color: #007B9A;
+    background-color: #ff3b30;
 }

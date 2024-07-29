@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aesthetic Password Generator</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Aesthetic Password Generator</h1>
+        <h1> Password Generator</h1>
         <div class="password-display">
             <input type="text" id="passwordOutput" readonly>
             <button id="copyButton">Copy</button>
+        </div>
+        <div class="strength-meter">
+            <div class="strength-bar"></div>
+            <p id="strengthText">Password Strength: </p>
         </div>
         <div class="options">
             <label for="lengthInput">Password Length:</label>
@@ -22,6 +28,8 @@
                 <option value="nature">Nature</option>
                 <option value="cosmic">Cosmic</option>
                 <option value="art">Art</option>
+                <option value="music">Music</option>
+                <option value="technology">Technology</option>
             </select>
         </div>
         <button id="generateButton">Generate Password</button>
